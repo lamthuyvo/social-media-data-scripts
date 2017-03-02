@@ -32,7 +32,7 @@ Facebook: [https://developers.facebook.com/](https://developers.facebook.com/)
 ####  Setting up the scripts
 1. Open up your Terminal and go to the folder where you want to clone this repository of code using the `cd` bash command.
 ```
-git clone TKTKTKTK
+git clone https://github.com/lamthuyvo/social-media-data-scripts.git
 cd social-data-scripts
 ```
 2. Then install all the dependencies, i.e. the Python libraries we are using for these scripts by running the following command:
