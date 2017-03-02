@@ -37,7 +37,7 @@ cd social-data-scripts
 ```
 2. Then install all the dependencies, i.e. the Python libraries we are using for these scripts by running the following command:
 ```
-pip install -r requirements.text
+pip install -r requirements.txt
 ```
 3. Make a secrets.py file that is modeled after the `secrets.py.example` file by going into the `scripts` directory and running these bash commands
 ```

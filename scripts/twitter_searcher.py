@@ -48,7 +48,7 @@ for tweet in limit_handled(tweepy.Cursor(api.search,
                     # point of time you want the search to start
                     since="2017-01-10",
                     # point of time you want the search to end
-                    until="2017-02-02",
+                    until="2017-02-28",
                     lang="en").items()):
     #Write a row to the csv file/ I use encode utf-8
     csvWriter.writerow([tweet.id_str,
