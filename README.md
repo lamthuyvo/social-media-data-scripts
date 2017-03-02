@@ -1,5 +1,7 @@
 # Mining data from social media platforms
 
+![Zoolander!](zoolander.gif)
+
 At present, most journalists treat social sources like they would any other — individual anecdotes and single points of contact. But to do so with a handful of tweets and Instagram posts is to ignore the potential of hundreds of millions of others.
 
 Many stories lay dormant in the vast amounts of data produced by everyday consumers. Here's a guide and tool box that may help you.
