@@ -1,6 +1,7 @@
 # Mining data from social media platforms
 
-![Zoolander!](zoolander.gif)
+![zoolander](https://cloud.githubusercontent.com/assets/3769472/23493747/11c76c1a-fedc-11e6-8b61-8da18bc72779.gif)
+
 
 At present, most journalists treat social sources like they would any other — individual anecdotes and single points of contact. But to do so with a handful of tweets and Instagram posts is to ignore the potential of hundreds of millions of others.
 
