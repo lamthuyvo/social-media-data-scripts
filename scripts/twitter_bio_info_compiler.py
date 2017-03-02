@@ -3,6 +3,7 @@
 # import dependencies
 import tweepy #https://github.com/tweepy/tweepy
 import csv
+from utils import open_csv_w
 # import authentication credentials
 from secrets import TWITTER_C_KEY, TWITTER_C_SECRET, TWITTER_A_KEY, TWITTER_A_SECRET
 
@@ -48,7 +49,7 @@ def get_userinfo(name):
 	print(userinfo)
 
 	# write the csv
-	with open('userinfo.csv', 'w+') as f:
+	with open_csv_w('userinfo.csv') as f:
 		writer = csv.writer(f)
 		writer.writerows([userinfo])
 	pass

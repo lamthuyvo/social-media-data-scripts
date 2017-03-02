@@ -4,6 +4,7 @@
 import tweepy #https://github.com/tweepy/tweepy
 import csv
 import time
+from utils import open_csv_w
 
 # import authentication credentials
 from secrets import TWITTER_C_KEY, TWITTER_C_SECRET, TWITTER_A_KEY, TWITTER_A_SECRET
@@ -30,7 +31,7 @@ counter  = 0;
 searchterm = "\"Queen Bey\""
 
 # Open/Create a file to append data
-csvFile = open('%s-result.csv' % searchterm, 'a')
+csvFile = open_csv_w('%s-result.csv' % searchterm)
 #Use csv Writer
 csvWriter = csv.writer(csvFile)
 # these are the headers of your csv

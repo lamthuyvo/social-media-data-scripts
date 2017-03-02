@@ -19,6 +19,7 @@
 *.rar
 *.tar
 *.zip
+*.pyc
 
 # Logs and databases #
 ######################
@@ -38,3 +39,4 @@ Thumbs.db
 
 # Config files #
 secrets.py
+__pycache__
