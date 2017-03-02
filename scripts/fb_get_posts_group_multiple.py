@@ -1,9 +1,9 @@
-import urllib2
 import json
 import datetime
 import csv
 import time
 import ssl
+from utils import request_until_succeed, open_csv_w
 from secrets import FACEBOOK_APP_ID, FACEBOOK_APP_SECRET
 
 context = ssl._create_unverified_context()
@@ -15,22 +15,6 @@ group_ids = [
 
 access_token = FACEBOOK_APP_ID + "|" + FACEBOOK_APP_SECRET
 
-def request_until_succeed(url):
-    req = urllib2.Request(url)
-    success = False
-    while success is False:
-        try:
-            response = urllib2.urlopen(req, context=context)
-            if response.getcode() == 200:
-                success = True
-        except Exception, e:
-            print e
-            time.sleep(5)
-
-            print "Error for URL %s: %s" % (url, datetime.datetime.now())
-            print "Retrying."
-
-    return response.read()
 
 # Needed to write tricky unicode correctly to csv
 def unicode_normalize(text):
@@ -149,7 +133,7 @@ def processFacebookPageFeedStatus(status, access_token):
             num_angrys)
 
 def scrapeFacebookPageFeedStatus(group_id, access_token):
-    with open('%s_facebook_statuses.csv' % group_id, 'wb') as file:
+    with open_csv_w('%s_facebook_statuses.csv' % group_id) as file:
         w = csv.writer(file)
         w.writerow(["status_id", "status_message", "status_author",
             "link_name", "status_type", "status_link",
@@ -161,8 +145,8 @@ def scrapeFacebookPageFeedStatus(group_id, access_token):
         num_processed = 0   # keep a count on how many we've processed
         scrape_starttime = datetime.datetime.now()
 
-        print "Scraping %s Facebook Page: %s\n" % \
-                (group_id, scrape_starttime)
+        print("Scraping %s Facebook Page: %s\n" % \
+                (group_id, scrape_starttime))
 
         statuses = getFacebookPageFeedData(group_id, access_token, 100)
 
@@ -178,8 +162,8 @@ def scrapeFacebookPageFeedStatus(group_id, access_token):
                 # stalling
                 num_processed += 1
                 if num_processed % 100 == 0:
-                    print "%s Statuses Processed: %s" % (num_processed,
-                            datetime.datetime.now())
+                    print("%s Statuses Processed: %s" % (num_processed,
+                            datetime.datetime.now()))
 
             # if there is no next page, we're done.
             if 'paging' in statuses.keys():
@@ -189,8 +173,8 @@ def scrapeFacebookPageFeedStatus(group_id, access_token):
                 has_next_page = False
 
 
-        print "\nDone!\n%s Statuses Processed in %s" % \
-                (num_processed, datetime.datetime.now() - scrape_starttime)
+        print("\nDone!\n%s Statuses Processed in %s" % \
+                (num_processed, datetime.datetime.now() - scrape_starttime))
 
 
 if __name__ == '__main__':
