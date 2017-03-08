@@ -6,9 +6,9 @@ import ssl
 from utils import request_until_succeed, open_csv_w
 from secrets import FACEBOOK_APP_ID, FACEBOOK_APP_SECRET
 
-
+# to get comments from a page you will need to run the other scripts first
 context = ssl._create_unverified_context()
-
+# this file_id must be the same as the ids you used to compile the posts using the other facebook scripts
 file_id = "brooklynmuseum"
 
 # get authentication

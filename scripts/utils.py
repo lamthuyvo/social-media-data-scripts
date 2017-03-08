@@ -20,5 +20,5 @@ def request_until_succeed(url):
 
 def open_csv_w(filename):
     """Open a csv file in proper mode depending on Python verion."""
-    return(open(filename, mode='wb') if sys.version_info[0] == 2 else
-           open(filename, mode='w+', newline=''))
+    return(open(filename, mode='a') if sys.version_info[0] == 2 else
+           open(filename, mode='a+', newline=''))
