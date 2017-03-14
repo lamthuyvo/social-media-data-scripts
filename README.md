@@ -15,8 +15,6 @@ This is a growing list of scripts we've put together to make social data mining 
 
 ### Setup
 
-
-
 #### Before you begin
 
 1. If you don’t already have Python installed, start by getting [Python up and running](http://docs.python-guide.org/en/latest/starting/installation/). Also have `git` installed.
@@ -39,6 +37,20 @@ cd social-data-scripts
 ```
 pip install -r requirements.txt
 ```
+or
+```
+sudo pip install -r requirements.txt
+```
+If you have problems with installing the dependencies through
+```
+pip install requests
+pip install tweepy --ignore-installed six
+```
+or
+```
+sudo pip install requests
+sudo pip install tweepy --ignore-installed six
+```
 3. Make a secrets.py file that is modeled after the `secrets.py.example` file by going into the `scripts` directory and running these bash commands
 ```
 cd scripts
@@ -51,9 +63,9 @@ Now you have a `secrets.py` file! 🤗 Open it up in a text editor of your choic
 
 #### Scripts
 
-* [tweet_dumper.py](https://github.com/buzzfeed-openlab/big-picture/blob/master/scripts/tweet_dumper.py): Up to 3200 tweets from an individual account (includes tweet id, time stamp, location, text, retweet count, favorite count (though the favorite count is inaccurate for retweets), whether something was a manual retweet, how it was tweeted (Tweetdek, Android, etc.)). This script was modified from [@Yanofsky](https://gist.github.com/yanofsky/5436496)'s original script.
-* [twitter_bio_info_compiler.py](https://github.com/buzzfeed-openlab/big-picture/blob/master/scripts/twitter_bio_info_compiler.py): Twitter user bios (name, display name, bio, followers count (at time of scraping),  following count (at time of scraping), when the account was created, location given in the bio)
-* [twitter_searcher.py](https://github.com/buzzfeed-openlab/big-picture/blob/master/scripts/twitter_searcher.py): You can search Twitter via its search API going back 7 days and grab tweets (id, author name, timestamp when it was created, favorites (again, unreliable), retweets, text)
+* [twitter_tweet_dumper.py](https://github.com/buzzfeed-openlab/big-picture/blob/master/scripts/scripts/twitter_tweet_dumper.py): Up to 3200 tweets from an individual account (includes tweet id, time stamp, location, text, retweet count, favorite count (though the favorite count is inaccurate for retweets), whether something was a manual retweet, how it was tweeted (Tweetdek, Android, etc.)). This script was modified from [@Yanofsky](https://gist.github.com/yanofsky/5436496)'s original script.
+* [twitter_bio_info_compiler.py](https://github.com/buzzfeed-openlab/big-picture/blob/master/scripts/scripts/twitter_bio_info_compiler.py): Twitter user bios (name, display name, bio, followers count (at time of scraping),  following count (at time of scraping), when the account was created, location given in the bio)
+* [twitter_searcher.py](https://github.com/buzzfeed-openlab/big-picture/blob/master/scripts/scripts/twitter_searcher.py): You can search Twitter via its search API going back 7 days and grab tweets (id, author name, timestamp when it was created, favorites (again, unreliable), retweets, text)
 
 ### Using Facebook's API
 
