@@ -159,7 +159,7 @@ def scrapeFacebookPageFeedStatus(group_id, access_token):
                 # stalling
                 num_processed += 1
                 if num_processed % 100 == 0:
-                    print ("%s Statuses Processed: %s") % (num_processed,
+                    print("%s Statuses Processed: %s") % (num_processed,
                             datetime.datetime.now())
 
             # if there is no next page, we're done.

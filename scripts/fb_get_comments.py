@@ -82,8 +82,8 @@ def scrapeFacebookPageFeedComments(page_id, access_token):
         num_processed = 0   # keep a count on how many we've processed
         scrape_starttime = datetime.datetime.now()
 
-        print "Scraping %s Comments From Posts: %s\n" % \
-                (file_id, scrape_starttime)
+        print("Scraping %s Comments From Posts: %s\n" % \
+                (file_id, scrape_starttime))
 
         # with open('%s_facebook_statuses.csv' % file_id, 'rb') as csvfile:
         with open_csv_w('%s_facebook_statuses.csv' % file_id, 'rb') as csvfile:
@@ -120,9 +120,9 @@ def scrapeFacebookPageFeedComments(page_id, access_token):
 
                                     num_processed += 1
                                     if num_processed % 1000 == 0:
-                                        print "%s Comments Processed: %s" % \
+                                        print("%s Comments Processed: %s" % \
                                                 (num_processed,
-                                                    datetime.datetime.now())
+                                                    datetime.datetime.now()))
 
                                 if 'paging' in subcomments:
                                     if 'next' in subcomments['paging']:
@@ -139,8 +139,8 @@ def scrapeFacebookPageFeedComments(page_id, access_token):
                         # stalling
                         num_processed += 1
                         if num_processed % 1000 == 0:
-                            print "%s Comments Processed: %s" % \
-                                    (num_processed, datetime.datetime.now())
+                            print("%s Comments Processed: %s" % \
+                                    (num_processed, datetime.datetime.now()))
 
                     if 'paging' in comments:
                         if 'next' in comments['paging']:
@@ -152,8 +152,8 @@ def scrapeFacebookPageFeedComments(page_id, access_token):
                         has_next_page = False
 
 
-        print "\nDone!\n%s Comments Processed in %s" % \
-                (num_processed, datetime.datetime.now() - scrape_starttime)
+        print("\nDone!\n%s Comments Processed in %s" % \
+                (num_processed, datetime.datetime.now() - scrape_starttime))
 
 
 if __name__ == '__main__':
