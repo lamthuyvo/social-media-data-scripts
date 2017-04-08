@@ -40,3 +40,4 @@ Thumbs.db
 # Config files #
 secrets.py
 __pycache__
+.csv

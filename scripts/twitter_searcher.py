@@ -28,7 +28,7 @@ counter  = 0;
 
 # search terms
 # find a full list of conventions here: https://dev.twitter.com/rest/public/search#query-operators
-searchterm = "\"nothing fucked me up\""
+searchterm = "\"Queen Bey\""
 
 # Open/Create a file to append data
 csvFile = open_csv_w('%s-result.csv' % searchterm)
