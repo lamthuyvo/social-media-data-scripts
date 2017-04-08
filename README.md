@@ -17,7 +17,7 @@ This is a growing list of scripts we've put together to make social data mining 
 
 #### Before you begin
 
-1. If you don’t already have Python installed, start by getting [Python up and running](http://docs.python-guide.org/en/latest/starting/installation/). Also have `git` installed.
+1. If you don’t already have Python installed, start by getting [Python up and running](http://docs.python-guide.org/en/latest/starting/installation/). Also have `git` installed. A helpful guide to getting a brand new machine set up can be found [here](http://blog.apps.npr.org/2013/06/06/how-to-setup-a-developers-environment.html), courtesy of [NPR's Visuals Team](https://twitter.com/nprviz).
 2. [You should also make sure you have](https://pip.pypa.io/en/stable/installing/) `pip`.
 
 
