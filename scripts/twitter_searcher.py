@@ -20,7 +20,7 @@ def limit_handled(cursor):
         try:
             yield cursor.next()
         except tweepy.error.TweepError:
-            print("waiting 15 minutes for Twitter to let me get more tweets ᕕ( ᐛ )ᕗ")
+            print("waiting 15 minutes for Twitter to let me get more tweets")
             time.sleep(15 * 60)
 
 # counter for console messages
