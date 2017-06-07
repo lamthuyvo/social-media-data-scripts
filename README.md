@@ -77,7 +77,10 @@ Facebook does not allow you to
 * [fb_get_posts_fb_group.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/scripts/fb_get_posts_fb_group.py) or [fb_get_posts_fb_group_multiple.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/scripts/fb_get_posts_fb_group_multiple.py): These scripts allow you to gather data from _public_ Facebook groups, either from just one or multiple groups. Adapted from [@minimaxir](https://github.com/minimaxir/facebook-page-post-scraper)'s scripts.
 * [fb_get_posts_fb_page.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/scripts/fb_get_posts_fb_page.py) or [fb_get_posts_fb_page_multiple.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/scripts/fb_get_posts_fb_page_multiple.py): These scripts allow you to gather data from _public_ Facebook pages, either from just one or multiple pages. Adapted from [@minimaxir](https://github.com/minimaxir/facebook-page-post-scraper)'s scripts.
 * [fb_get_comments_from_fb.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/scripts/fb_get_comments.py): This script allows you to get the comments from each Facebook group or page _after_ you have run the aforementioned scripts. Adapted from [@minimaxir](https://github.com/minimaxir/facebook-page-post-scraper)'s scripts.
-* [fb_id_proofer.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/scripts/fb_id_proofer.py): This script allows you to go through a list of Facebook Page IDs and see whether they are valid.
+*
+[fb_get_page_info.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/scripts/fb_get_comments.py): This script allows you to get Facebook Page information, such as the title, description, fan count, for a number of Facebook pages.  
+*
+[fb_id_proofer.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/scripts/fb_id_proofer.py): This script allows you to go through a list of Facebook Page IDs and see whether they are valid.
 
 
 ## How to run each script
