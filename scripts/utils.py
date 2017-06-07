@@ -6,18 +6,23 @@ import time
 
 def request_until_succeed(url):
     while True:
-        res = requests.get(url)
+        try:
+            res = requests.get(url, timeout=10)
+        except Exception as e:
+            print("ERROR: {0}".format(e))
+            print("Retrying in 5s.")
+            time.sleep(5)
+            continue
+
         if res.status_code == 200:
             return res.text
         else:
-            time.sleep(5)
-            print("ERR: {0} @ {1}\n".format(
+            print("STATUS CODE {0} @ {1}\n".format(
                 res.status_code,
                 url,
             ))
-            print("Retrying.")
-
-    # return r.text
+            print("Retrying in 5s.")
+            time.sleep(5)
 
 def open_csv_w(filename):
     """Open a csv file in proper mode depending on Python verion."""
