@@ -23,7 +23,7 @@ def unicode_normalize(text):
 def getFacebookCommentFeedData(status_id, access_token, num_comments):
 
     # Construct the URL string
-        base = "https://graph.facebook.com/v2.6"
+        base = "https://graph.facebook.com/v2.9"
         node = "/%s/comments" % status_id
         fields = "?fields=id,message,like_count,created_time,comments,from,attachment"
         parameters = "&order=chronological&limit=%s&access_token=%s" % \

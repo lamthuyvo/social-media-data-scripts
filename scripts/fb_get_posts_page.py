@@ -22,7 +22,7 @@ def getFacebookPageFeedData(page_id, access_token, num_statuses):
 
     # Construct the URL string; see http://stackoverflow.com/a/37239851 for
     # Reactions parameters
-    base = "https://graph.facebook.com/v2.6"
+    base = "https://graph.facebook.com/v2.9"
     node = "/%s/posts" % page_id
     fields = "/?fields=message,link,created_time,type,name,id," + \
             "comments.limit(0).summary(true),shares,reactions" + \
@@ -40,7 +40,7 @@ def getReactionsForStatus(status_id, access_token):
     # See http://stackoverflow.com/a/37239851 for Reactions parameters
         # Reactions are only accessable at a single-post endpoint
 
-    base = "https://graph.facebook.com/v2.6"
+    base = "https://graph.facebook.com/v2.9"
     node = "/%s" % status_id
     reactions = "/?fields=" \
             "reactions.type(LIKE).limit(0).summary(total_count).as(like)" \
