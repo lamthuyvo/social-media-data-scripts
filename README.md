@@ -23,17 +23,17 @@ There are broadly three different ways to harvest data from the social web:
 ##### APIs
 The kind of data that official channels like API data streams provide is very limited. Despite harboring warehouses of data on consumers’ behavior, social media companies only provide a sliver of it through their APIs (for Facebook, developers can only get data for public pages and groups, and for Twitter, this access is often restricted to a set number of tweets from a user’s timeline or to a set time frame for search).
 
-Scripts and instructions related to APIs can be found in the [`01-apis`](https://github.com/lamthuyvo/social-media-data-scripts/01-apis/) directory of this repository.
+Scripts and instructions related to APIs can be found in the [`01-apis`](https://github.com/lamthuyvo/social-media-data-scripts/tree/master/01-apis) directory of this repository.
 
 ##### Personal Archives
 There are ways for users of social media platforms to request and download archives of their own online persona and behavior. Some services like Facebook or Twitter will allow users to download a history of the data that constitutes their posts, their messaging, or their profile photos.
 
-Scripts and instructions related to personal archives can be found in the [`02-personal-archives`](https://github.com/lamthuyvo/social-media-data-scripts/02-personal-archives/) directory of this repository.
+Scripts and instructions related to personal archives can be found in the [`02-personal-archives`](https://github.com/lamthuyvo/social-media-data-scripts/tree/master/02-personal-archives/) directory of this repository.
 
 ##### Scraping
 Last but not least, extracting social media data from the platforms through scraping is often against the terms of service. Scraping a social media platform can get users booted from a service and potentially even result in a lawsuit.
 
-Scripts and information related to scraping can be found in the [`03-scraping`](https://github.com/lamthuyvo/social-media-data-scripts/03-scraping/) directory of this repository.
+Scripts and information related to scraping can be found in the [`03-scraping`](https://github.com/lamthuyvo/social-media-data-scripts/tree/master/03-scraping/) directory of this repository.
 
 ### Setup
 
