@@ -105,7 +105,7 @@ if __name__ == '__main__':
     '36872601914',
     '390478684333910']
 
-    with open('pages_info.csv', 'w+') as f:
+    with open('../output/pages_info.csv', 'w+') as f:
 
         fieldnames = ["group_name",
                         "about",

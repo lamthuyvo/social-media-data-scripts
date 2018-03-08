@@ -69,7 +69,7 @@ def proof_facebook_ids(fb_id):
             error_message]
 
 	#write the csv
-    with open_csv_w('cleaned_ids.csv') as f:
+    with open_csv_w('../output/cleaned_ids.csv') as f:
     	writer = csv.writer(f)
     	writer.writerow(id_data)
 

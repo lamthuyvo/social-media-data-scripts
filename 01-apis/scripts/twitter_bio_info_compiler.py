@@ -23,7 +23,7 @@ usernames = [
 
 
 # open spreadsheet and add column heads
-with open('userinfo.csv', 'w+') as f:
+with open('../output/userinfo.csv', 'w+') as f:
 		writer = csv.writer(f)
 		writer.writerow(["name",
 					"display_name",
@@ -49,7 +49,7 @@ def get_userinfo(name):
 	print(userinfo)
 
 	# write the csv
-	with open_csv_w('userinfo.csv') as f:
+	with open_csv_w('../output/userinfo.csv') as f:
 		writer = csv.writer(f)
 		writer.writerows([userinfo])
 	pass

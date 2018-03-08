@@ -18,15 +18,16 @@ api = tweepy.API(auth)
 
 # array of user names, replace them with your own choices
 usernames = [
-"potus"
+"twitter",
+"realdonaldtrump"
 ]
 
 
 
-def get_followers(name):
+def get_friends(name):
 
 	# open spreadsheet and add column heads
-	with open_csv_w('%s_followerlist.csv' % name) as f:
+	with open_csv_w('../output/%s_friendlist.csv' % name) as f:
 			writer = csv.writer(f)
 			writer.writerow(["id",
 							"screen_name",
@@ -41,22 +42,22 @@ def get_followers(name):
 
 
 	# friends_ids returns an array of the ids of all the people the user follows
-	follower_ids = api.followers_ids(screen_name = name)
+	friend_ids = api.friends_ids(screen_name = name)
 
 	# cycle through every id in the array of people that the user follows and gather information for each one
-	for follower_id in follower_ids:
+	for friend_id in friend_ids:
 		user = None
 		while user is None:
 			try:
-				user = api.get_user(follower_id)
+				user = api.get_user(friend_id)
 			except tweepy.error.RateLimitError:
 				print("sleeping for a minute")
 				time.sleep(60)
 
 		# write the csv
-		with open_csv_w('%s_followerlist.csv' % name) as f:
+		with open_csv_w('../output/%s_friendlist.csv' % name) as f:
 			writer = csv.writer(f)
-			writer.writerow([follower_id,
+			writer.writerow([friend_id,
 							user.screen_name.encode('utf-8'),
 							user.name.encode('utf-8'),
 							user.description.encode('utf-8'),
@@ -72,4 +73,4 @@ def get_followers(name):
 
 # for each username run the function
 for name in usernames:
-	get_followers(name)
+	get_friends(name)

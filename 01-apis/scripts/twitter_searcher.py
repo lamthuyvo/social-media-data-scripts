@@ -31,7 +31,7 @@ counter  = 0;
 searchterm = "\"Ben Smith\""
 
 # Open/Create a file to append data
-csvFile = open_csv_w('%s-result.csv' % searchterm)
+csvFile = open_csv_w('../output/%s-result.csv' % searchterm)
 #Use csv Writer
 csvWriter = csv.writer(csvFile)
 # these are the headers of your csv
