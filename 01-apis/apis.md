@@ -1,10 +1,47 @@
-# Getting data from APIs
+# APIs
 
 One of the ways in which companies allow you to tap into these data troves is via an API, which stands for Application Programming Interface. APIs are like a kind of middleman between the social media platform and developers who wish to access information from the platform.
 
 An API can also allow us to make requests for specific data, which we’ll receive in a structured form. Developers can request data with a script (code that is written to perform specific and often repetitive tasks for us) by opening up a data stream (basically a very plain website that displays one data point after another based on what a developer requested) through the API and then by compiling each data point into a spreadsheet.
 
 This directory contains scripts related to APIs.
+
+### Getting started
+
+If you have followed the installation steps from the `README.md` you can skip step 2.
+
+1. Open up your Terminal and go to the folder where you want to clone this repository of code using the `cd` bash command.
+```
+cd social-media-data-scripts
+```
+
+2. Then install all the dependencies, i.e. the Python libraries we are using for these scripts by running the following command:
+```
+pip install -r requirements.txt
+```
+or
+```
+sudo pip install -r requirements.txt
+```
+If you have problems with installing the dependencies through
+```
+pip install requests
+pip install tweepy --ignore-installed six
+pip install beautifulsoup4
+```
+or
+```
+sudo pip install requests
+sudo pip install tweepy --ignore-installed six
+pip install beautifulsoup4
+```
+
+3. Make a secrets.py file that is modeled after the `secrets.py.example` file by going into the `scripts` directory and running these bash commands
+```
+cd scripts
+cp secrets.py.example secrets.py
+```
+Now you have a `secrets.py` file! 🤗 Open it up in a text editor of your choice (like Atom or Sublime Text!) and fill the credentials you created earlier. Don't forget to save it!
 
 ### Using Twitter's API
 

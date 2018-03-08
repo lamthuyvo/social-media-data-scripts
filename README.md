@@ -23,19 +23,21 @@ There are broadly three different ways to harvest data from the social web:
 ##### APIs
 The kind of data that official channels like API data streams provide is very limited. Despite harboring warehouses of data on consumers’ behavior, social media companies only provide a sliver of it through their APIs (for Facebook, developers can only get data for public pages and groups, and for Twitter, this access is often restricted to a set number of tweets from a user’s timeline or to a set time frame for search).
 
-##### Personal Archives
-Then there are limitations on the kind of data users can request of their own online persona and behavior. Some services like Facebook or Twitter will allow users to download a history of the data that constitutes their online selves—their posts, their messaging, or their profile photos—but that data archive won’t always include everything each social media company has on them either.
+Scripts and instructions related to APIs can be found in the [`01-apis`](https://github.com/lamthuyvo/social-media-data-scripts/01-apis/) directory of this repository.
 
-For instance, users can only see what ads they’ve clicked on going three months back, making it really hard for them to see whether they may or may not have clicked on a Russia-sponsored post. Instagram doesn’t allow any archival downloads.
+##### Personal Archives
+There are ways for users of social media platforms to request and download archives of their own online persona and behavior. Some services like Facebook or Twitter will allow users to download a history of the data that constitutes their posts, their messaging, or their profile photos.
+
+Scripts and instructions related to personal archives can be found in the [`02-personal-archives`](https://github.com/lamthuyvo/social-media-data-scripts/02-personal-archives/) directory of this repository.
 
 ##### Scraping
 Last but not least, extracting social media data from the platforms through scraping is often against the terms of service. Scraping a social media platform can get users booted from a service and potentially even result in a lawsuit.
 
-### The scripts in this repository
-This repository consists of scripts for Twitter and Facebook's API.
-
+Scripts and information related to scraping can be found in the [`03-scraping`](https://github.com/lamthuyvo/social-media-data-scripts/03-scraping/) directory of this repository.
 
 ### Setup
+
+Below is a set of instructions you can follow to get your machine ready to run any of the Python scripts in this repository. While Python is one of the most powerful languages for data gathering and analysis, it can take a few tries to get it installed and running properly. If you're a beginner, don't despair though, these growing pains are normal and can vary from machine to machine. We promise the payoff is worth it!
 
 #### Before you begin
 
@@ -49,7 +51,7 @@ This repository consists of scripts for Twitter and Facebook's API.
 Twitter: [https://apps.twitter.com/](https://apps.twitter.com/)
 Facebook: [https://developers.facebook.com/](https://developers.facebook.com/)
 
-####  Setting up the scripts
+####  Setting up your system
 1. Open up your Terminal and go to the folder where you want to clone this repository of code using the `cd` bash command.
 ```
 git clone https://github.com/lamthuyvo/social-media-data-scripts.git
@@ -75,13 +77,10 @@ sudo pip install requests
 sudo pip install tweepy --ignore-installed six
 pip install beautifulsoup4
 ```
-3. Make a secrets.py file that is modeled after the `secrets.py.example` file by going into the `scripts` directory and running these bash commands
-```
-cd scripts
-cp secrets.py.example secrets.py
-```
-Now you have a `secrets.py` file! 🤗 Open it up in a text editor of your choice (like Atom or Sublime Text!) and fill the credentials you created earlier. Don't forget to save it!
 
+### Getting your data
+
+Hooray! You're ready to get your data now. We have created a directory for scripts that you can use to get data from each data source.
 
 ## Further Reading
 There are numerous useful resources and tools out on the web for social media data gathering. Find an incomplete list that I'll continue to update below.
