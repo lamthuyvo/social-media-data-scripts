@@ -67,4 +67,4 @@ Facebook does not allow you to
 
 ## How to run each script
 1. Follow the instructions in the comments of each script to customize your API query and resulting `.csv` file
-2. Run your script with the bash command `python scriptname.py` to generate a csv of tweets or Facebook posts. Then, go make do some journalism-ing!
+2. Run your script with the bash command `python3 scriptname.py` to generate a csv of tweets or Facebook posts. Then, go make do some journalism-ing!

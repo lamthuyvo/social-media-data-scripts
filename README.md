@@ -31,9 +31,9 @@ There are ways for users of social media platforms to request and download archi
 Scripts and instructions related to personal archives can be found in the [`02-personal-archives`](https://github.com/lamthuyvo/social-media-data-scripts/tree/master/02-personal-archives/) directory of this repository.
 
 ##### Scraping
-Last but not least, extracting social media data from the platforms through scraping is often against the terms of service. Scraping a social media platform can get users booted from a service and potentially even result in a lawsuit.
+While there's plenty of social media data on display on the sites you browse, extracting social media data from the platforms through scraping is often against the terms of service. Scraping a social media platform can get users booted from a service and potentially even result in a lawsuit.
 
-Scripts and information related to scraping can be found in the [`03-scraping`](https://github.com/lamthuyvo/social-media-data-scripts/tree/master/03-scraping/) directory of this repository.
+If you end up wanting to look into harvesting data from the social web, there is information information related in the  [`03-scraping`](https://github.com/lamthuyvo/social-media-data-scripts/tree/master/03-scraping/) directory of this repository.
 
 ### Setup
 
@@ -41,7 +41,7 @@ Below is a set of instructions you can follow to get your machine ready to run a
 
 #### Before you begin
 
-1. If you don’t already have Python installed, start by getting [Python up and running](http://docs.python-guide.org/en/latest/starting/installation/). Also have `git` installed. A helpful guide to getting a brand new machine set up can be found [here](http://blog.apps.npr.org/2013/06/06/how-to-setup-a-developers-environment.html), courtesy of [NPR's Visuals Team](https://twitter.com/nprviz).
+1. If you don’t already have Python installed, start by getting [Python up and running](http://docs.python-guide.org/en/latest/starting/installation/). There are two Python versions — Python 2 and Python 3. Please install Python 3, as it handles modern Internet language and characters related to it better. Also have `git` installed. A helpful guide to getting a brand new machine set up can be found [here](http://blog.apps.npr.org/2013/06/06/how-to-setup-a-developers-environment.html), courtesy of [NPR's Visuals Team](https://twitter.com/nprviz).
 2. [You should also make sure you have](https://pip.pypa.io/en/stable/installing/) `pip`.
 
 
@@ -81,6 +81,11 @@ pip install beautifulsoup4
 ### Getting your data
 
 Hooray! You're ready to get your data now. We have created a directory for scripts that you can use to get data from each data source.
+
+You can follow the directions for each script in its sub-folders:
+* To gather data from APIs, you can use the scripts in this directory: [`01-apis`](https://github.com/lamthuyvo/social-media-data-scripts/tree/master/01-apis)
+* To gather data from personal archives, you can use the scripts in this directory: [`02-personal-archives`](https://github.com/lamthuyvo/social-media-data-scripts/tree/master/02-personal-archives/)
+* To gather data from live web sites, you can use the scripts and instructions in this directory: [`03-scraping`](https://github.com/lamthuyvo/social-media-data-scripts/tree/master/03-scraping/)
 
 ## Further Reading
 There are numerous useful resources and tools out on the web for social media data gathering. Find an incomplete list that I'll continue to update below.
