@@ -8,6 +8,7 @@ from secrets import YOUTUBE_API_KEY
 rows=[]
 # this is where we define the API query and all its variable
 api_key = YOUTUBE_API_KEY
+# add the YOUTUBE IDs into the lists here, the ID can usually be found at the end of the URL:  https://www.youtube.com/watch?v=tGRzz0oqgUE
 video_ids = ['tGRzz0oqgUE', 'JQbjS0_ZfJ0']
 
 def get_video_data(video_id):
