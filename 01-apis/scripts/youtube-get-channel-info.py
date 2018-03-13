@@ -40,7 +40,6 @@ def get_channel_data(channel_id):
                     'videoCount': videoCount,
                     'commentCount': commentCount
                 }
-        print(row)
         rows.append(row)
     else:
         print(video_id + " is not a valid ID")
