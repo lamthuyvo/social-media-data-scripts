@@ -64,6 +64,7 @@ Now you have a `secrets.py` file! 🤗 Open it up in a text editor of your choic
 
 ### Using YouTube's API
 * [youtube-get-video-info.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/01-apis/scripts/youtube-get-video-info.py): This script allows you to go through a list of video IDs and collect information like their title, description, view count and other meta data.
+* [youtube-get-channel-info.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/01-apis/scripts/youtube-get-channel-info.py): This script allows you to go through a list of channel IDs and collect information like their title, description, view count and other meta data.
 
 ## How to run each script
 1. Follow the instructions in the comments of each script to customize your API query and resulting `.csv` file
