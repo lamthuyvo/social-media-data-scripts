@@ -51,7 +51,7 @@ if __name__ == '__main__':
         get_channel_data(channel_id)
 
     # make a new csv into which we will write all the rows
-    with open('../output/youtube-channel-information.csv', 'w+') as csvfile:
+    with open_csv_w('../output/youtube-channel-information.csv') as csvfile:
             # these are the header names:
             fieldnames = ['youtube_id','publishedAt','title','description','viewCount','subscriberCount','videoCount', 'commentCount']
             # this creates your csv

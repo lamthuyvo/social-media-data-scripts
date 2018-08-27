@@ -60,7 +60,7 @@ if __name__ == '__main__':
         get_video_data(video_id)
 
         # make a new csv into which we will write all the rows
-    with open('../output/youtube-video-information.csv', 'w+') as csvfile:
+    with open_csv_w('../output/youtube-video-information.csv') as csvfile:
         # these are the header names:
         fieldnames = ['youtube_id','publishedAt','channelId','channelTitle','title','description','tags','viewCount','likeCount','dislikeCount','favoriteCount','commentCount','topicCategories']
         # this creates your csv

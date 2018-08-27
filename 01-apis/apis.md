@@ -54,6 +54,7 @@ Now you have a `secrets.py` file! 🤗 Open it up in a text editor of your choic
 * [twitter_searcher.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/01-apis/scripts/twitter_searcher.py): You can search Twitter via its search API going back 7 days and grab tweets (id, author name, timestamp when it was created, favorites (again, unreliable), retweets, text)
 
 ### Using Facebook's API
+Note: changes to the Facebook API now requires API users to undergo additional screening processes before being able to gather information on public posts. 
 
 #### Scripts
 * [fb_get_posts_fb_group.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/01-apis/scripts/fb_get_posts_fb_group.py) or [fb_get_posts_fb_group_multiple.py](https://github.com/lamthuyvo/social-media-data-scripts/blob/master/01-apis/scripts/fb_get_posts_fb_group_multiple.py): These scripts allow you to gather data from _public_ Facebook groups, either from just one or multiple groups. Adapted from [@minimaxir](https://github.com/minimaxir/facebook-page-post-scraper)'s scripts.
