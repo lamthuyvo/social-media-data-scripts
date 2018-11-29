@@ -1,41 +1,28 @@
 import csv
 from bs4 import BeautifulSoup
 
-# make an empty array for your data
 rows = []
-# set foldername
-foldername = 'facebook-archive'
-# open messages
-with open('../data/%s/html/ads.htm' % foldername) as page:
-    soup = BeautifulSoup(page,  "html.parser")
-    # only grab the content that is relevant to us on the page using the class named "contents"
-    contents = soup.find('div', class_='contents')
+foldername = 'facebook-lamthuyvo'
 
-    # isolate all the lists of ads
-    ad_lists = contents.find_all('ul')
-    # lets loop through each list
-    for ad_list in ad_lists:
-        # for every item in this list ...
-        for item in ad_list:
-            advertiser = item.find(text=True)
-            category = ad_list.previous_sibling.get_text()
-            if item.find("div", class_='meta'):
-                metadata = item.find("div", class_='meta').get_text()
-            else:
-                metadata = ''
+with open("%s/ads/advertisers_you've_interacted_with.html" % foldername) as page:
+    soup = BeautifulSoup(page,  'html.parser')
+    contents = soup.find('div', class_='_4t5n')
+    ad_list = contents.find_all( 'div' , class_='uiBoxWhite')
 
-            # make a data dictionary that will
-            row = { 'advertiser': advertiser,
-                    'category': category,
-                    'metadata': metadata}
+    for item in ad_list:
+        advert = item.find('div', class_='_2let').get_text()
+        metadata = item.find('div', class_='_2lem').get_text()
 
-            rows.append(row)
+        row = { 'advert': advert,
+                'metadata': metadata
+              }
+        rows.append(row)
 
 
 # make a new csv into which we will write all the rows
-with open('../output/%s-all-advertisers.csv' % foldername, 'w+') as csvfile:
+with open('%s-all-advertisers.csv' % foldername, 'w+') as csvfile:
     # these are the header names:
-    fieldnames = ['advertiser', 'category', 'metadata']
+    fieldnames = ['advert', 'metadata']
     # this creates your csv
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     # this writes in the first row, which are the headers
