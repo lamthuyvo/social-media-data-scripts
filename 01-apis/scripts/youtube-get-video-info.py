@@ -19,21 +19,26 @@ def get_video_data(video_id):
     api_response = requests.get(api_url)
     videodetails = json.loads(api_response.text)
     if len(videodetails['items']) > 0:
+
         # Assign values from API to variables
         for item in videodetails['items']:
-            youtube_id = item['id']
-            publishedAt = item['snippet']['publishedAt']
-            channelId = item['snippet']['channelId']
-            channelTitle = item['snippet']['channelTitle']
-            title = item['snippet']['localized']['title']
-            description = item['snippet']['localized']['description']
-            tags = ', '.join(item['snippet']['tags'])
-            viewCount = item['statistics']['viewCount']
-            likeCount = item['statistics']['likeCount']
-            dislikeCount = item['statistics']['dislikeCount']
-            favoriteCount = item['statistics']['favoriteCount']
-            commentCount = item['statistics']['commentCount']
-            topicCategories = ''.join(item['topicDetails']['topicCategories'])
+            # set variables for subsections of the data
+            snippet = item.get('snippet', {})
+            stats = item.get('statistics', {})
+
+            youtube_id = item.get('id', {})
+            publishedAt = snippet.get('publishedAt', {})
+            channelId = snippet.get('channelId', {})
+            channelTitle = snippet.get('channelTitle', {})
+            title = snippet.get('localized', {}).get('title', {})
+            description = snippet.get('localized', {}).get('description', {})
+            tags = snippet.get('tags', {})
+            viewCount = stats.get('viewCount', {})
+            likeCount = stats.get('likeCount', {})
+            dislikeCount = stats.get('dislikeCount', {})
+            favoriteCount = stats.get('favoriteCount', {})
+            commentCount = stats.get('commentCount', {})
+            topicCategories = item.get('topicDetails', {}).get('topicCategories', {})
 
             row = {
                     'youtube_id': youtube_id,

@@ -28,7 +28,7 @@ def get_channel_data(channel_id):
             viewCount = item['statistics']['viewCount']
             subscriberCount = item['statistics']['subscriberCount']
             videoCount = item['statistics']['videoCount']
-            commentCount = item['statistics']['commentCount']
+            commentCount = item['statistics'].get('commentCount')
 
             row = {
                     'youtube_id': youtube_id,
