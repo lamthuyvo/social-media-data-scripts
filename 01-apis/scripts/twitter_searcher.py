@@ -57,7 +57,7 @@ for tweet in limit_handled(tweepy.Cursor(api.search,
                         tweet.created_at,
                         tweet.favorite_count,
                         tweet.retweet_count,
-                        tweet.text.encode("utf-8")])
+                        tweet.text])
     # this code prints information in your console while you're getting tweets
     counter += 1
     if counter % 100 == 0:

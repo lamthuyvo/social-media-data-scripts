@@ -58,15 +58,15 @@ def get_followers(name):
 		with open_csv_w('../output/%s_followerlist.csv' % name) as f:
 			writer = csv.writer(f)
 			writer.writerow([follower_id,
-							user.screen_name.encode('utf-8'),
-							user.name.encode('utf-8'),
-							user.description.encode('utf-8'),
+							user.screen_name,
+							user.name,
+							user.description,
 							user.followers_count,
 							user.friends_count,
 							user.created_at,
-							user.location.encode('utf-8')
+							user.location
 			])
-			print(user.screen_name.encode('utf-8'))
+			print(user.screen_name)
 
 
 
