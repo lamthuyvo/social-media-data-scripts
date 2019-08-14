@@ -19,11 +19,11 @@ def makeSearch(search_string):
     return search_string.replace(' ','+')
 
 # this is where we define the API query
-# some notes from the API docs on the search term https://developers.google.com/youtube/v3/docs/search/list: The q parameter specifies the query term to search for. Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing. Note that the pipe character must be URL-escaped when it is sent in your API request. The URL-escaped value for the pipe character is %7C. 
+# some notes from the API docs on the search term (https://developers.google.com/youtube/v3/docs/search/list): The q parameter specifies the query term to search for. Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either "boating" or "sailing", set the q parameter value to boating|sailing. Similarly, to search for videos matching either "boating" or "sailing" but not "fishing", set the q parameter value to boating|sailing -fishing. Note that the pipe character must be URL-escaped when it is sent in your API request. The URL-escaped value for the pipe character is %7C.
 api_base = 'https://www.googleapis.com/youtube/v3/search?'
 api_key_param = '&key=' + api_key
 params = '&part=snippet&order=Viewcount&maxResults=50'
-search_string = makeSearch('AOC')
+search_string = makeSearch('transgender')
 type = '&type=' + 'video'
 searchterm = '&q="'+search_string +'"'
 api_url = api_base+params+searchterm + type + api_key_param

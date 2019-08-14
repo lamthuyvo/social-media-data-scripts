@@ -10,10 +10,12 @@ rows=[]
 api_key = YOUTUBE_API_KEY
 # the search API caps search results to approximately 500 videos. To maximize data gathering it helps to set various start and end dates
 date_strings = [
-    {"start_date":"2018-01-01T00:00:00Z","end_date":"2018-06-01T00:00:00Z"},
+    # {"start_date":"2018-01-01T00:00:00Z","end_date":"2018-06-01T00:00:00Z"},
     {"start_date":"2018-06-01T00:00:00Z","end_date":"2019-01-01T00:00:00Z"},
     {"start_date":"2019-01-01T00:00:00Z","end_date":"2019-06-01T00:00:00Z"}
 ]
+channel_name = 'UCDmCBKaKOtOrEqgsL4-3C8Q'
+
 
 def makeSearch(search_string):
     return search_string.replace(' ','+')
@@ -22,11 +24,9 @@ def makeSearch(search_string):
 api_base = 'https://www.googleapis.com/youtube/v3/search?'
 api_key_param = '&key=' + api_key
 params = '&part=snippet&order=Viewcount&maxResults=50'
-search_string = makeSearch('')
-tag = '&##=' + 'transgender'
-type = '&type='+ 'video'
-searchterm = '&q="'+search_string +'"'
-api_url = api_base+params+ searchterm + tag + type + api_key_param
+# type = '&type='+ 'video'
+channelID= '&channelId=' +channel_name
+api_url = api_base + params +channelID  + api_key_param
 print(api_url)
 
 
@@ -35,6 +35,7 @@ def gatherAPIdata(start_date_string,end_date_string):
     start_date='&publishedAfter=' + start_date_string
     end_date='&publishedBefore='+ end_date_string
     api_response = requests.get(api_url +start_date+end_date).text
+
     videos = json.loads(api_response)
 
     # this is a variable we will use to check whether there's another page from which we can get data or whether we've gotten to the end of our data query (end of the phone book!)

@@ -28,7 +28,7 @@ counter  = 0;
 
 # search terms
 # find a full list of conventions here: https://dev.twitter.com/rest/public/search#query-operators
-searchterm = "\"Ben Smith\""
+searchterm = "#MuellerReport"
 
 # Open/Create a file to append data
 csvFile = open_csv_w('../output/%s-result.csv' % searchterm)
@@ -47,9 +47,9 @@ for tweet in limit_handled(tweepy.Cursor(api.search,
                     q=searchterm,
                     # note that Twitter only makes available a sample of tweets from the last 7 days: https://dev.twitter.com/rest/public/search
                     # point of time you want the search to start
-                    since="2017-01-10",
+                    since="2019-01-10",
                     # point of time you want the search to end
-                    until="2017-03-10",
+                    until="2019-04-19",
                     lang="en").items()):
     #Write a row to the csv file/ I use encode utf-8
     csvWriter.writerow([tweet.id_str,

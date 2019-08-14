@@ -53,11 +53,34 @@ def get_all_tweets(screen_name):
 				tweet.favorite_count,
 				tweet.retweet_count,
 				tweet.retweeted,
-				tweet.source.encode("utf-8"),
-				tweet.text.encode("utf-8"),] for tweet in alltweets]
+				tweet.source,
+				tweet.text,
+				tweet.geo,
+				tweet.lang,
+				tweet.is_quote_status,
+				tweet.user.name,
+				tweet.user.screen_name,
+				tweet.user.location,
+				tweet.user.description,
+				tweet.user.protected,
+				tweet.user.followers_count,
+				tweet.user.friends_count,
+				tweet.user.listed_count,
+				tweet.user.created_at,
+				tweet.user.favourites_count,
+				tweet.user.utc_offset,
+				tweet.user.time_zone,
+				tweet.user.geo_enabled,
+				tweet.user.verified,
+				tweet.user.statuses_count,
+				tweet.user.lang
+				]
+
+				for tweet in alltweets]
+
 
 	#write the csv
-	with open_csv_w('../output/%s_tweets.csv' % screen_name) as f:
+	with open_csv_w('%s_tweets.csv' % screen_name) as f:
 		writer = csv.writer(f)
 		writer.writerow(["id",
 				"created_at",
@@ -65,7 +88,26 @@ def get_all_tweets(screen_name):
 				"retweets",
 				"retweeted",
 				"source",
-				"text"])
+				"text",
+				"geolocation",
+				"language",
+				"is_quote_status",
+				"username",
+				"user_screen_name",
+				"user_location",
+				"user_description",
+				"user_protected",
+				"user_followers_count",
+				"user_friends_count",
+				"user_listed_count",
+				"user_created_at",
+				"user_favourites_count",
+				"user_utc_offset",
+				"user_time_zone",
+				"user_geo_enabled",
+				"user_verified",
+				"user_statuses_count",
+				"user_lang"])
 		writer.writerows(outtweets)
 
 	pass

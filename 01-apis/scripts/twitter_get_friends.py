@@ -18,8 +18,8 @@ api = tweepy.API(auth)
 
 # array of user names, replace them with your own choices
 usernames = [
-"twitter",
-"realdonaldtrump"
+"marshallproj",
+"buzzfeednews"
 ]
 
 
