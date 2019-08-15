@@ -32,14 +32,13 @@ with open('userinfo.csv', 'w+') as f:
 					"bio",
 					"followers_count",
 					"following_count",
-					"favourites_count"
+					"favourites_count",
 					"statuses_count",
 					"acct_created",
 					"language",
 					"location",
 					"is_protected",
 					"is_verified"
-
 
 					])
 pass
