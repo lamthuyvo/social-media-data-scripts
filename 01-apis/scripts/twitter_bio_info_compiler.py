@@ -23,15 +23,25 @@ usernames = [
 
 
 # open spreadsheet and add column heads
-with open('../output/userinfo.csv', 'w+') as f:
+with open('userinfo.csv', 'w+') as f:
 		writer = csv.writer(f)
-		writer.writerow(["name",
+		writer.writerow([
+					"id",
+					"screen_name",
 					"display_name",
 					"bio",
 					"followers_count",
 					"following_count",
+					"favourites_count"
+					"statuses_count",
 					"acct_created",
-					"location"])
+					"language",
+					"location",
+					"is_protected",
+					"is_verified"
+
+
+					])
 pass
 
 def get_userinfo(name):
@@ -39,13 +49,20 @@ def get_userinfo(name):
 	user = api.get_user(screen_name = name)
 
 	# create row
-	userinfo = [name.encode('utf-8'),
-				user.name.encode('utf-8'),
-				user.description.encode('utf-8'),
+	userinfo = [user.id,
+				user.screen_name,
+				user.name,
+				user.description,
 				user.followers_count,
 				user.friends_count,
+				user.favourites_count,
+				user.statuses_count,
 				user.created_at,
-				user.location.encode('utf-8')]
+				user.lang,
+				user.location,
+				user.protected,
+				user.verified
+				]
 	print(userinfo)
 
 	# write the csv
