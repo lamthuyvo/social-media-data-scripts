@@ -27,7 +27,7 @@ def limit_handled(cursor):
 counter  = 0;
 
 # search terms
-# find a full list of conventions here: https://dev.twitter.com/rest/public/search#query-operators
+# find a full list of conventions here: https://developer.twitter.com/en/docs/tweets/rules-and-filtering/overview/standard-operators
 searchterm = "#MuellerReport"
 
 # Open/Create a file to append data
