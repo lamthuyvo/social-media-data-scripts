@@ -18,6 +18,12 @@ def get_channel_data(channel_id):
     # this opens the link and tells your computer that the format it is reading is JSON
     api_response = requests.get(api_url)
     channeldetails = json.loads(api_response.text)
+    '''
+    Alternatively:
+    from apiclient.discovery import build
+    obj = build('youtube', 'v3', developerKey=api_key)
+    channeldetails = obj.channels().list(part=params, id=channel_id).execute()
+    '''
     if len(channeldetails['items']) > 0:
         # Assign values from API to variables
         for item in channeldetails['items']:
