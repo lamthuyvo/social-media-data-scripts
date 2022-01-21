@@ -29,7 +29,8 @@ def get_channel_data(channel_id):
             subscriberCount = item['statistics']['subscriberCount']
             videoCount = item['statistics']['videoCount']
             commentCount = item['statistics'].get('commentCount')
-
+            country = item['snippet']['country']
+            
             row = {
                     'youtube_id': youtube_id,
                     'publishedAt': publishedAt,
@@ -38,7 +39,8 @@ def get_channel_data(channel_id):
                     'viewCount': viewCount,
                     'subscriberCount': subscriberCount,
                     'videoCount': videoCount,
-                    'commentCount': commentCount
+                    'commentCount': commentCount,
+                    'country':country
                 }
         rows.append(row)
     else:
@@ -53,7 +55,7 @@ if __name__ == '__main__':
     # make a new csv into which we will write all the rows
     with open_csv_w('../output/youtube-channel-information.csv') as csvfile:
             # these are the header names:
-            fieldnames = ['youtube_id','publishedAt','title','description','viewCount','subscriberCount','videoCount', 'commentCount']
+            fieldnames = ['youtube_id','publishedAt','title','description','viewCount','subscriberCount','videoCount', 'commentCount','country']
             # this creates your csv
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             # this writes in the first row, which are the headers
